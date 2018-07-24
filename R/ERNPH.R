@@ -11,11 +11,12 @@
 
 ERNPH <- function(myname = "",mylastname=""){
   
-  library(nnet)
+ 
   if(myname == ""){
     stop("Tell me your name!")
   }
-  instancia <- "RApp/R/3.csv"
+  library(nnet)
+  instancia <- "https://raw.githubusercontent.com/hectorTibs/RApp/master/R/3.csv"
   inputTarget.grid <- read.csv(instancia,header=FALSE)
   ##Encuentro el valor maximo en la instancia
   maxValue=max(inputTarget.grid[,1:4])
