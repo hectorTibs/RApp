@@ -1,4 +1,4 @@
-instancia <- "C://Users//fer_m//Desktop//Hector Esparza//TIBS//R//3.csv"
+instancia <- "RApp/R/3.csv"
 inputTarget.grid <- read.csv(instancia,header=FALSE)
 ##Encuentro el valor maximo en la instancia
 maxValue=max(inputTarget.grid[,1:4])
