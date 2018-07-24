@@ -10,7 +10,7 @@
 #' 
 #' 
 
-Recom <- function(Giro = 1){
+Recom <- function(Giro = ""){
   
   # Eighth code snippet
   installations <- read.csv("https://raw.githubusercontent.com/hectorTibs/RApp/master/R/Recom.csv")
