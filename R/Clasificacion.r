@@ -16,7 +16,7 @@ Clasificacion <- function(){
 #odbcChannel <- odbcConnect("DataClasificacion", uid = "sa", pwd = "Tibs2016")
 #ABA_NivelPoliza <- sqlFetch(odbcChannel, "Info_Aba_NivelPoliza")
 
-ABA_NivelPoliza <-"https://raw.githubusercontent.com/hectorTibs/RApp/master/R/ABA_NivelPoliza.csv"
+ABA_NivelPoliza <-"https://raw.githubusercontent.com/hectorTibs/RApp/master/R/Clasifica_NP.csv"
 ABA_NP <- read.csv(ABA_NivelPoliza, header = TRUE)
 
 library(e1071)
@@ -47,5 +47,5 @@ ABA.test$PrediClas <- results
 ABA.test$PClas <- results2
 
 
-list( message = ABA.test)
+list( data = ABA.test)
 }
