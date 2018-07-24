@@ -1,9 +1,22 @@
+
+#' 
+#' 
+#' Basic hello world function to be called from the demo app
+#' 
+#' @export
+#' 
+#' 
+#' 
+#' 
+#' 
+Clasificacion <- function(){
+
+
 #library("RODBC")
 #odbcChannel <- odbcConnect("DataClasificacion", uid = "sa", pwd = "Tibs2016")
 #ABA_NivelPoliza <- sqlFetch(odbcChannel, "Info_Aba_NivelPoliza")
 
-ABA_NivelPoliza <-
-  "C://Users//fer_m//Desktop//Hector Esparza//TIBS//R//RApp//RApp//R//ABA_NivelPoliza.csv")
+ABA_NivelPoliza <-"https://raw.githubusercontent.com/hectorTibs/RApp/master/R/ABA_NivelPoliza.csv"
 ABA_NP <- read.csv(ABA_NivelPoliza, header = TRUE)
 
 library(e1071)
@@ -32,3 +45,7 @@ x <- 100 * sum(diag(mc)) / sum(mc)
 #Agregar Columna de Prediccion a la tabla ABA.test
 ABA.test$PrediClas <- results
 ABA.test$PClas <- results2
+
+
+list( message = ABA.test)
+}
