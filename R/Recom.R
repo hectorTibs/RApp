@@ -83,11 +83,11 @@ Recom <- function(Giro = ""){
                  decreasing = TRUE))
   }
   
-  user <- Giro
+  user <- 1
   
   listing <- most.probable.packages(user, user.package.matrix, distances)
   
- colnames(user.package.matrix)[listing[1:5]]
+ #colnames(user.package.matrix)[listing[1:5]]
   
   list( message = colnames(user.package.matrix)[listing[1:5]])
 }
