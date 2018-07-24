@@ -9,12 +9,9 @@
 #' 
 #' 
 
-hello <- function(myname = "",mylastname=""){
+ERNPH <- function(myname = "",mylastname=""){
   
-  
-  
-  
-  
+  library(nnet)
   if(myname == ""){
     stop("Tell me your name!")
   }
