@@ -4,6 +4,8 @@
 #' 
 #' @export
 #' @param myname your name. Required.
+#' 
+
 hello <- function(myname = ""){
   if(myname == ""){
     stop("Tell me your name!")
