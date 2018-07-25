@@ -17,7 +17,7 @@ Clasificacion <- function(){
   names(ABA_NivelPoliza)<- c("CvePoliza","CvePolizaPrevia","InVigPoliza", "FinVigPoliza","Producto","TipoEmision",
                              "TiendaDanos","SucursalDanos","OfVntDanos", "TipoProducto","PrimaNetaPesos","SumaAsegurada", "EstPoliza")
   
-  ABA_NP <-"https://raw.githubusercontent.com/hectorTibs/RApp/master/R/ABA_NivelPoliza.csv"
+  ABA_NivelPoliza <- read.csv("https://raw.githubusercontent.com/hectorTibs/RApp/master/R/ABA_NivelPoliza.csv")
   
   library(e1071)
   # Selección de una submuestra de 105 (el 70% de los datos)
