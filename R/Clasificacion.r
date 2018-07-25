@@ -40,8 +40,10 @@ Clasificacion <- function(){
   x <- 100 * sum(diag(mc)) / sum(mc)
   
   #Agregar Columna de Prediccion a la tabla ABA.test
-  ABA.test$PrediClas <- Porcentaje
+  y<- data.frame(Porcentaje)
+  ABA.test$PrediClas <- y
   ABA.test$PClas <- results2
+  #data.frame(ABA.test$PrediClas)
  
 
 list( data = ABA.test)

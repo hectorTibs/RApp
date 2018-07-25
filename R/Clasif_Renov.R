@@ -46,6 +46,8 @@ x <- 100 * sum(diag(mc)) / sum(mc)
 #Agregar Columna de Prediccion a la tabla ABA.test
 ABA.test$PrediClas <- r
 ABA.test$PClas <- results2
+data.frame(PrediClas)
+
 
 #########################################################################
 ####################### OBTENER RENOVACION POR PRODUCTO #################
