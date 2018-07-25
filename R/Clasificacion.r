@@ -13,9 +13,7 @@ Clasificacion <- function(){
   #library("RODBC")
   #odbcChannel <- odbcConnect("DataClasificacion", uid = "sa", pwd = "Tibs2016")
   #ABA_NivelPoliza <- sqlFetch(odbcChannel, "Info_Aba_NivelPoliza")
-  
- 
-  
+
   ABA_NivelPoliza <- read.csv("https://raw.githubusercontent.com/hectorTibs/RApp/master/R/ABA_NivelPoliza.csv")
   
   library(e1071)
