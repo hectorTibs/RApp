@@ -38,7 +38,7 @@ results2 <- predict(object = model, ABA.test, type = "class")
 
 mc <- table(results2, ABA.test$EstPoliza)
 mc
-
+ Porcentaje <- round(results*100)
 # Correctamente clasificados
 x <- 100 * sum(diag(mc)) / sum(mc)
 
