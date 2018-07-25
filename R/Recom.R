@@ -83,7 +83,7 @@ Recom <- function(Giro = ""){
                  decreasing = TRUE))
   }
   
-  user <- Giro
+  user <- 1
   
   listing <- most.probable.packages(user, user.package.matrix, distances)
   
