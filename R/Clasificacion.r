@@ -35,7 +35,7 @@ Clasificacion <- function(){
   # predict necesita el parámetro newdata
   results <- predict(object = model, newdata = ABA.test, type = "raw")
   results2 <- predict(object = model, ABA.test, type = "class")
-  
+   
   mc <- table(results2, ABA.test$EstPoliza)
   mc
   Porcentaje <- round(results*100)
