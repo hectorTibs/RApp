@@ -43,7 +43,7 @@ mc
 x <- 100 * sum(diag(mc)) / sum(mc)
 
 #Agregar Columna de Prediccion a la tabla ABA.test
-ABA.test$PrediClas <- results
+ABA.test$PrediClas <- Porcentaje
 ABA.test$PClas <- results2
 
 
