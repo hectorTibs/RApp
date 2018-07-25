@@ -14,8 +14,7 @@ Clasificacion <- function(){
   #odbcChannel <- odbcConnect("DataClasificacion", uid = "sa", pwd = "Tibs2016")
   #ABA_NivelPoliza <- sqlFetch(odbcChannel, "Info_Aba_NivelPoliza")
   
-  names(ABA_NivelPoliza)<- c("CvePoliza","CvePolizaPrevia","InVigPoliza", "FinVigPoliza","Producto","TipoEmision",
-                             "TiendaDanos","SucursalDanos","OfVntDanos", "TipoProducto","PrimaNetaPesos","SumaAsegurada", "EstPoliza")
+ 
   
   ABA_NivelPoliza <- read.csv("https://raw.githubusercontent.com/hectorTibs/RApp/master/R/ABA_NivelPoliza.csv")
   
