@@ -9,7 +9,7 @@
 #' 
 #' 
 #' 
-ClasificacionCancelacion <- function(json = ""){
+ClasificacionCancelacion <- function(CvePoliza = "",CvePolizaPrevia = "",InVigPoliza = "",FinVigPoliza = "",Vendedor = "",Producto = "",TipoEmision = "",TiendaDanos = "",SucursalDanos = "",OfVntDanos = "",TipoProducto = "",PrimaNetaPesos = "",SumaAsegurada = "",EstPoliza = ""){
  
   ###################### LECTOR DE ARCHIVO ####################
   ABA_NivelPoliza <- ("https://raw.githubusercontent.com/hectorTibs/RApp/master/R/ABA_NivelPoliza.csv")
@@ -50,7 +50,12 @@ ClasificacionCancelacion <- function(json = ""){
   #data = fromJSON(json)
   #Pruebajson <- as.data.frame(data)
   #print(Pruebajson)
-  Prueba2<- predict(object = model, newdata = json, type = "raw")
+  vectordatos <- vector(CvePoliza,CvePolizaPrevia,InVigPoliza,FinVigPoliza,Vendedor,Producto,TipoEmision,TiendaDanos,SucursalDanos,OfVntDanos,TipoProducto,PrimaNetaPesos,SumaAsegurada,EstPoliza)
+  
+  
+  
+  
+  Prueba2<- predict(object = model, newdata = vectordatos, type = "raw")
   PorcentajeP <- Prueba2 * 100
   list(PorcentajeP)
 }
