@@ -57,6 +57,7 @@ ClasificacionCancelacion <- function(CvePoliza = "",CvePolizaPrevia = "",InVigPo
   #Pruebajson <- as.data.frame(vectordatos)
   
   
+  
   Prueba2<- predict(object = model, newdata = Pruebajson, type = "raw")
   PorcentajeP <- Prueba2 * 100
   list(PorcentajeP)
