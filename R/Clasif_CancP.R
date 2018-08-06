@@ -50,7 +50,7 @@ ClasificacionCancelacion <- function(CvePoliza = "",CvePolizaPrevia = "",InVigPo
   #data = fromJSON(json)
   #Pruebajson <- as.data.frame(data)
   #print(Pruebajson)
-  vectordatos <- vector(CvePoliza,CvePolizaPrevia,InVigPoliza,FinVigPoliza,Vendedor,Producto,TipoEmision,TiendaDanos,SucursalDanos,OfVntDanos,TipoProducto,PrimaNetaPesos,SumaAsegurada,EstPoliza)
+  vectordatos <- c(CvePoliza,CvePolizaPrevia,InVigPoliza,FinVigPoliza,Vendedor,Producto,TipoEmision,TiendaDanos,SucursalDanos,OfVntDanos,TipoProducto,PrimaNetaPesos,SumaAsegurada,EstPoliza)
   
   
   
