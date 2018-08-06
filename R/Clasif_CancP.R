@@ -54,6 +54,7 @@ ClasificacionCancelacion <- function(){
   PorcentajeP <- Prueba2 * 100
   
   
+  
   list( data PorcentajeP )
 }
   
