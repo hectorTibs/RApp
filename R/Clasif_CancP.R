@@ -55,7 +55,7 @@ ClasificacionCancelacion <- function(){
   
   
   
-  list( data PorcentajeP )
+  list(PorcentajeP)
 }
   
 
