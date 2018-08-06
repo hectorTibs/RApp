@@ -46,11 +46,11 @@ ClasificacionCancelacion <- function(json = ""){
   
   ############## JSON ###########################################
   
-  library(rjson)
-  data = fromJSON(json)
-  Pruebajson <- as.data.frame(data)
-  print(Pruebajson)
-  Prueba2<- predict(object = model, newdata = Pruebajson, type = "raw")
+  #library(rjson)
+  #data = fromJSON(json)
+  #Pruebajson <- as.data.frame(data)
+  #print(Pruebajson)
+  Prueba2<- predict(object = model, newdata = json, type = "raw")
   PorcentajeP <- Prueba2 * 100
   list(PorcentajeP)
 }
