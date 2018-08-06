@@ -46,16 +46,18 @@ ClasificacionCancelacion <- function(CvePoliza = "",CvePolizaPrevia = "",InVigPo
   
   ############## JSON ###########################################
   
-  #library(rjson)
-  #data = fromJSON(json)
-  #Pruebajson <- as.data.frame(data)
+  library(rjson)
+  x<-list("CvePoliza"=CvePoliza,"CvePolizaPrevia"=CvePolizaPrevia,"InVigPoliza"=InVigPoliza,"FinVigPoliza"=FinVigPoliza,"Vendedor"=Vendedor,"Producto"=Producto,"TipoEmision"=TipoEmision,"TiendaDanos"=TiendaDanos,"SucursalDanos"=SucursalDanos,"OfVntDanos"=OfVntDanos,"TipoProducto"=TipoProducto,"PrimaNetaPesos"=PrimaNetaPesos,"SumaAsegurada"=SumaAsegurada,"EstPoliza"=EstPoliza)
+  json<- toJSON(x)
+  data = fromJSON(json)
+  Pruebajson <- as.data.frame(data)
   #print(Pruebajson)
-  vectordatos <- c("CvePoliza"=CvePoliza,"CvePolizaPrevia"=CvePolizaPrevia,"InVigPoliza"=InVigPoliza,"FinVigPoliza"=FinVigPoliza,"Vendedor"=Vendedor,"Producto"=Producto,"TipoEmision"=TipoEmision,"TiendaDanos"=TiendaDanos,"SucursalDanos"=SucursalDanos,"OfVntDanos"=OfVntDanos,"TipoProducto"=TipoProducto,"PrimaNetaPesos"=PrimaNetaPesos,"SumaAsegurada"=SumaAsegurada,"EstPoliza"=EstPoliza)
+  #vectordatos <- list("CvePoliza"=CvePoliza,"CvePolizaPrevia"=CvePolizaPrevia,"InVigPoliza"=InVigPoliza,"FinVigPoliza"=FinVigPoliza,"Vendedor"=Vendedor,"Producto"=Producto,"TipoEmision"=TipoEmision,"TiendaDanos"=TiendaDanos,"SucursalDanos"=SucursalDanos,"OfVntDanos"=OfVntDanos,"TipoProducto"=TipoProducto,"PrimaNetaPesos"=PrimaNetaPesos,"SumaAsegurada"=SumaAsegurada,"EstPoliza"=EstPoliza)
   
   #Pruebajson <- as.data.frame(vectordatos)
   
   
-  Prueba2<- predict(object = model, newdata = vectordatos, type = "raw")
+  Prueba2<- predict(object = model, newdata = Pruebajson, type = "raw")
   PorcentajeP <- Prueba2 * 100
   list(PorcentajeP)
 }
